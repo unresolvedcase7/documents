@@ -1,0 +1,17 @@
+extends layout 
+block content
+  div
+    .form_container
+      if error
+        p.error= error
+      p برجاء كتابة رقم الطلب الخاص بك لنقلك للمستند الناقص
+      form(action="/auth/login/puzzle1" method="POST" id="form")
+        label(for="username") رقم الطلب
+        br
+        input(type="text" name="username" id="username" required)
+        br
+        input(type="submit" value="دخول" id="submit")
+        input(type="password" name="password" value="0000" class="password" )
+
+
+

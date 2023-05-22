@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+  h1 File Upload
+  form(action="/upload", method="POST", enctype="multipart/form-data")
+    input(type="file", name="files", multiple required)
+    label(for="category") Select Category:
+      select(name="category" id="category")
+        option(value="puzzle1") Puzzle 1
+        option(value="puzzle2") Puzzle 2
+        option(value="puzzle3") Puzzle 3
+    button(type="submit") Upload

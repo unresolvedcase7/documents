@@ -1,0 +1,7 @@
+extends layout 
+
+block content
+  div
+    .documents
+      each file in files
+        a(href= `/documents/${file.category}/${file._id}`) #{file.filename}
